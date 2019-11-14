@@ -19,4 +19,6 @@
 }
 
 const cal = new StringCalculator();
+console.log(cal.add(""));
+console.log(cal.add("1"));
 console.log(cal.add("1,2"));
