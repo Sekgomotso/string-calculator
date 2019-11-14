@@ -1,4 +1,4 @@
- class StringCalculator {
+class StringCalculator {
     
     constructor (){}
 
@@ -18,7 +18,11 @@
     
 }
 
-const cal = new StringCalculator();
+var cal = new StringCalculator();
 console.log(cal.add(""));
 console.log(cal.add("1"));
 console.log(cal.add("1,2"));
+
+module.exports = {
+    StringCalculator
+}
