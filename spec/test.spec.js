@@ -23,4 +23,8 @@ describe ("must add unknown amount of numbers", () => {
     it("must handle new lines between numbers", () => {
         expect(cal.add("1\n4,8")).toEqual(13);
     });
+
+    it("must support different delimiters", () => {
+        expect(cal.add("1\n4,8|5;5")).toEqual(23);
+    });
 });

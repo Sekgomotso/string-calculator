@@ -3,8 +3,8 @@ class StringCalculator {
     constructor (){}
 
     add (stringNumbers) {
-        // regular expression for new line and comma acceptance
-        var splitted = stringNumbers.split (/[\n\,]/); 
+        // regular expression for different delimiters acceptance
+        var splitted = stringNumbers.split (/[/\n\,\;\{}\|]/); 
         var add = 0;
         var i = 0;
 
@@ -32,6 +32,7 @@ console.log(cal.add("1"));
 console.log(cal.add("1,2"));
 console.log(cal.add("1,2,3,4"));
 console.log(cal.add("1\n4,8"));
+console.log(cal.add("1\n4,8|5;5"));
 
 module.exports = {
     StringCalculator
