@@ -7,10 +7,14 @@ class StringCalculator {
         var add = 0;
         var i = 0;
 
+        // return zero for an empty string
+
         if (stringNumbers == "") {
             return 0;
         } else {
-
+        
+        // Add unknown amount of numbers
+        
         for (i = 0; i < splitted.length; i++) {
             add += parseInt(splitted[i]);
         }
