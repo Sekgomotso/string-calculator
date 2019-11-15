@@ -31,4 +31,9 @@ describe ("must add unknown amount of numbers", () => {
     it("must ignore numbers greater than a 1000", () => {
         expect(cal.add("5+1001")).toEqual(5);
     });
+
+    it("must allow delimiters of any length", () => {
+        expect(cal.add("//[***]\n1***2***3")).toEqual(6);
+    });
+
 });
