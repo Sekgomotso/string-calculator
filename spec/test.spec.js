@@ -19,4 +19,8 @@ describe ("must add unknown amount of numbers", () => {
     it("should return 10", () => {
         expect(cal.add("1,2,3,4")).toEqual(10);
     });
+
+    it("must handle new lines between numbers", () => {
+        expect(cal.add("1\n4,8")).toEqual(13);
+    });
 });
