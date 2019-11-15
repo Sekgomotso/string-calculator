@@ -12,7 +12,27 @@ class StringCalculator {
 
         if (stringNumbers == "") {
             return 0;
-        } else {
+        }
+
+        // Numbers greater than a 1000 should be ignored
+
+        if (stringNumbers > 1000) {
+            stringNumber = 0;
+        }
+       
+        else {
+        
+        // Negatives not allowed
+
+        for (var i = 0; i < stringNumbers.length; i++) {
+            if (stringNumbers[i] == "-") {
+                try {
+                    throw "negatives not allowed";
+                } catch(error) {
+                    console.log (error);
+                }
+            }
+        }
         
         // Add unknown amount of numbers
         
@@ -21,6 +41,7 @@ class StringCalculator {
         // change string into an interger (parseInt)
             add += parseInt(splitted[i]);
         }
+        
         return add;
         }
     }
@@ -33,6 +54,8 @@ console.log(cal.add("1,2"));
 console.log(cal.add("1,2,3,4"));
 console.log(cal.add("1\n4,8"));
 console.log(cal.add("1\n4,8|5;5"));
+console.log(cal.add("-1,3"));
+console.log(cal.add("1001,3"));
 
 module.exports = {
     StringCalculator
