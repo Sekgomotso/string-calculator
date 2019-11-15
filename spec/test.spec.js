@@ -1,4 +1,4 @@
-var {StringCalculator} = require ("../src/stringCalculator");
+var {StringCalculator} = require("../src/stringCalculator");
 var cal = new StringCalculator();
 
 describe ("string calculator add two returns sum", () => {
@@ -12,5 +12,11 @@ describe ("string calculator add two returns sum", () => {
 
     it ("must return the sum of the two numbers", () => {
         expect(cal.add("1,2")).toEqual(3);
+    });
+});
+
+describe ("must add unknown amount of numbers", () => {
+    it("should return 10", () => {
+        expect(cal.add("1,2,3,4")).toEqual(10);
     });
 });
