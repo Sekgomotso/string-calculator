@@ -28,11 +28,7 @@ describe ("must add unknown amount of numbers", () => {
         expect(cal.add("1\n4,8|5;5")).toEqual(23);
     });
 
-    it("must support different delimiters", () => {
-        expect(cal.add("-1,5")).toBe("negatives not allowed");
-    });
-
     it("must ignore numbers greater than a 1000", () => {
-        expect(cal.add("1000+5")).toEqual(5);
+        expect(cal.add("5+1001")).toEqual(5);
     });
 });

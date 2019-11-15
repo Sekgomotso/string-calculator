@@ -17,7 +17,7 @@ class StringCalculator {
         // Numbers greater than a 1000 should be ignored
 
         if (stringNumbers > 1000) {
-            stringNumber = 0;
+            stringNumbers = 0;
         }
        
         else {
@@ -55,7 +55,7 @@ console.log(cal.add("1,2,3,4"));
 console.log(cal.add("1\n4,8"));
 console.log(cal.add("1\n4,8|5;5"));
 console.log(cal.add("-1,3"));
-console.log(cal.add("1001,3"));
+console.log(cal.add("3+1001"));
 
 module.exports = {
     StringCalculator
