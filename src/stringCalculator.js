@@ -4,7 +4,7 @@ class StringCalculator {
 
     add (stringNumbers) {
         // regular expression for different delimiters acceptance
-        var splitted = stringNumbers.split (/[/\n\,\;\{}\|]/); 
+        var splitted = stringNumbers.split (/[/\n\,\;\{}\|]/g);
         var add = 0;
         var i = 0;
 

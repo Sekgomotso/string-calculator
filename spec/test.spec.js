@@ -28,12 +28,12 @@ describe ("must add unknown amount of numbers", () => {
         expect(cal.add("1\n4,8|5;5")).toEqual(23);
     });
 
-    it("must ignore numbers greater than a 1000", () => {
-        expect(cal.add("5+1001")).toEqual(5);
+    it("must not allow negative numbers", () => {
+        expect(cal.add("1,3")).toEqual(4);
     });
 
-    it("must allow delimiters of any length", () => {
-        expect(cal.add("//[***]\n1***2***3")).toEqual(6);
+    it("must ignore numbers greater than a 1000", () => {
+        expect(cal.add("5+1001")).toEqual(5);
     });
 
 });
