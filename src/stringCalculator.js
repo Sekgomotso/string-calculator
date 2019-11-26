@@ -26,11 +26,7 @@ class StringCalculator {
 
         for (var i = 0; i < stringNumbers.length; i++) {
             if (stringNumbers[i] == "-") {
-                try {
-                    throw "negatives not allowed";
-                } catch(error) {
-                    console.log (error);
-                }
+                throw new Error('negatives not allowed');
             }
         }
         
@@ -46,16 +42,6 @@ class StringCalculator {
         }
     }
  }
-
-var cal = new StringCalculator();
-console.log(cal.add(""));
-console.log(cal.add("1"));
-console.log(cal.add("1,2"));
-console.log(cal.add("1,2,3,4"));
-console.log(cal.add("1\n4,8"));
-console.log(cal.add("1\n4,8|5;5"));
-console.log(cal.add("-1,3"));
-console.log(cal.add("3+1001"));
 
 module.exports = {
     StringCalculator

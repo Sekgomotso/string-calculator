@@ -30,7 +30,7 @@ describe ("must add unknown amount of numbers", () => {
 
     it("must not allow negative numbers", () => {
         expect(() => {
-            cal.add("-1,3")}).toThrowError;
+            cal.add("-1,3")}).toThrowError('negatives not allowed');
     });
 
     it("must ignore numbers greater than a 1000", () => {
